@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* all */
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  width: 100%;
+  /* height: 100vh; */
+  padding-block: 2rem;
+  padding-inline: 5rem;
+}
+
+/* texts */
+h1,
+.h1 {
+  font-size: 2.5rem;
+  user-select: none;
+}
+h2,
+.h2 {
+  font-size: 1.5rem;
+}
+h3,
+.h3 {
+  font-size: 1.25rem;
+}
+h4,
+.h4 {
+  font-size: 1rem;
+}
+h5,
+.h5 {
+  font-size: 0.75rem;
+}
+h6,
+.h6 {
+  font-size: 0.5rem;
+}
+
+/* animations */
+@keyframes welcomeText {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 50%;
+  }
+}
+.onWelcome {
+  animation: welcomeText 0.3s forwards normal ease-out;
+}
+
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  background: #333;
+  z-index: 99999999;
+}
+header h1 {
+  color: palevioletred;
+  user-select: none;
+}
+header .nav-links {
+  display: flex;
+  align-items: center;
+}
+header li a {
+  color: #fff;
+  padding-inline: 1rem;
+  transition: all 0.3s;
+}
+header li a:hover {
+  color: #ccc;
+}
+header .hamburger {
+  display: none;
+  font-size: 1.5rem;
+  color: #f3f3f3;
+}
+
+/* Welcome */
+.welcome {
+  height: 100vh;
+  background-color: blueviolet;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.welcome h1 {
+  position: relative;
+  text-align: center;
+  font-size: 5rem;
+  letter-spacing: 0.1rem;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+  top: 0;
+}
+.welcome h1 span {
+  color: palevioletred;
+}
+.welcome div h1:hover {
+  top: -10px;
+}
+
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+}
+
+/* About */
+.about {
+  padding-top: 10rem;
+}
+.about h1 {
+  color: #333;
+  user-select: none;
+  text-align: center;
+}
+.about h1 span {
+  color: palevioletred;
+}
+.remind {
+  color: palevioletred;
+  font-weight: bold;
+}
+.html {
+  color: orangered;
+}
+.css {
+  color: aqua;
+}
+.js {
+  color: gold;
+}
+.about-text {
+  background: rgb(94, 38, 94);
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1.1rem;
+}
+.about-text p {
+  margin-block: 1rem;
+}
+
+/* why us */
+.why {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+}
+.left-why {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  letter-spacing: 1px;
+}
+.right-why ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.right-why ul li {
+  list-style: square;
+  color: #555;
+  transition: all 0.2s;
+}
+.right-why ul li:hover {
+  color: #222;
+}
+
+/* Join */
+.join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+.join h1 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+.join form {
+  background: blueviolet;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+label {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.join form input,
+textarea {
+  background: #f3f3f3;
+  color: #222;
+  outline: none;
+  border: 3px solid #f3f3f3;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s;
+  margin-block: 0.75rem;
+}
+.join form input:focus,
+textarea:focus {
+  border: 3px solid gray;
+}
+textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 150px;
+  max-height: 150px;
+}
+.join form button {
+  background: #222;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  /* width: 50%; */
+  /* margin-inline: auto; */
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  background: #ccc;
+  padding: 6rem 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.right h3 {
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.icon {
+  font-size: 2rem;
+  margin-left: 0.3rem;
+  cursor: pointer;
+  color: palevioletred;
+}
+.icon:first-child {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 970px) {
+  h1,
+  .h1 {
+    font-size: 2rem;
+    user-select: none;
+  }
+  h2,
+  .h2 {
+    font-size: 1.5rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1rem;
+  }
+  h4,
+  .h4 {
+    font-size: 0.75rem;
+  }
+  h5,
+  .h5 {
+    font-size: 0.5rem;
+  }
+  h6,
+  .h6 {
+    font-size: 0.3rem;
+  }
+  .welcome-text h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 2rem;
+  }
+  header .nav-links {
+    display: block;
+  }
+  header .hamburger {
+    display: block;
+  }
+  .nav-links.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.3s;
+  }
+  .nav-links {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 102.4px;
+    right: 0;
+    width: 100%;
+    background: #555;
+    text-align: center;
+    padding: 2.5rem;
+  }
+  .nav-links li {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  section {
+    padding: 2rem;
+  }
+  .welcome-text h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .join form {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+    .why {
+        grid-template-columns: 1fr;
+        padding-block: 1rem;
+    }
+    .left-why {
+        margin-bottom: 1rem;
+    }
+
+    .join  {
+        margin-top: 1rem;
+    }
+    .join form {
+        width: 100%;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        text-align: center;
+    }
+}
